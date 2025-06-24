@@ -14,7 +14,7 @@ public class PostPostsTest {
 
     /**
      * Test Case 3: Create a new post
-     * Requirement: Send a POST request, verify status code 201, and check the response body.
+     * Prerequisite: Send a POST request, verify status code 201, and check the response body.
      */
     @Test
     public void testCreatePost() {

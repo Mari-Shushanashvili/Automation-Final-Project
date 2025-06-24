@@ -11,7 +11,7 @@ public class DeletePostsTest {
 
     /**
      * Test Case 5: Delete an existing post
-     * Requirement: Send a DELETE request to /posts/1 and ensure the status code is 200 or 204.
+     * Prerequisite: Send a DELETE request to /posts/1 and ensure the status code is 200 or 204.
      */
     @Test
     public void testDeletePost() {

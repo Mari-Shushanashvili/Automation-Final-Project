@@ -14,7 +14,7 @@ public class GetPostsTest {
 
     /**
      * Test Case 1: Get all posts
-     * Requirement: Verify status code is 200 and the response contains at least 100 posts.
+     * Prerequisite: Verify status code is 200 and the response contains at least 100 posts.
      */
     @Test
     public void testGetAllPosts() {
@@ -30,7 +30,7 @@ public class GetPostsTest {
 
     /**
      * Test Case 2: Get a single post
-     * Requirement: Verify that for post with id 1, the userId equals 1.
+     * Prerequisite: Verify that for post with id 1, the userId equals 1.
      */
     @Test
     public void testGetSinglePost() {
@@ -42,5 +42,20 @@ public class GetPostsTest {
                 .assertThat()
                 .statusCode(200)
                 .body("userId", equalTo(1));
+    }
+
+    /**
+     * Test Case 6: Get a non-existent post (Negative Test)
+     * Prerequisite: Verify that the API returns a 404 Not Found status code
+     * when requesting a resource that does not exist.
+     */
+    @Test
+    public void testGetNonExistentPost() {
+        RestAssured.given()
+                .when()
+                .get("/posts/9999")
+                .then()
+                .assertThat()
+                .statusCode(404);
     }
 }

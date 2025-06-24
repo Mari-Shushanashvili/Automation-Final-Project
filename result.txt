@@ -1,0 +1,26 @@
+All required API tests and UI scenarios are passing successfully.
+
+API Tests:
+- GET /posts (status 200, 100+ posts) - passed
+- GET /posts/1 (userId is 1) - passed
+- POST /posts (status 201) - passed
+- PUT /posts/1 (title updated) - passed
+- DELETE /posts/1 (status 200) - passed
+- GET /posts/9999 (Negative Test, status 404) - passed
+
+UI Scenarios:
+- Successful Login - passed
+- Failed Login & Error Validation - passed
+- Add Product to Cart - passed
+- Verify Product in Cart - passed
+- Logout Functionality - passed
+- Remove Product from Cart - passed
+
+Best Practices Implemented:
+1.  Negative Testing: An additional API test was created to verify the correct 404 Not Found response for a non-existent resource.
+2.  Additional UI Scenario: Added a UI test to verify that a user can add an item to the cart and then successfully remove it, confirming the cart is empty.
+3.  Code Organization: I refactored UI framework to use a central `Hooks.java` class for all browser setup and tear-down. In my opinion, this improves code reusability and organization.
+4.  Code Structure: I moved supporting framework classes (`Hooks.java`, `BaseTest.java`) into a dedicated `hooks` package. In my opinion it improves folder structure.
+
+Known Issues:
+- None. All tests are passing.

@@ -14,7 +14,7 @@ public class PutPostsTest {
 
     /**
      * Test Case 4: Update an existing post
-     * Requirement: Send a PUT request to /posts/1 and confirm the title is updated.
+     * Prerequisite: Send a PUT request to /posts/1 and confirm the title is updated.
      */
     @Test
     public void testUpdatePost() {
